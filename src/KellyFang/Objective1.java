@@ -20,7 +20,7 @@ import java.util.Scanner;
 
         }
         System.out.println("You got it! The number is "+guess);
-        System.out.println("It took you ")
+        System.out.println("It took you "+counter+" tries to guess my number.");
     }
 
 }

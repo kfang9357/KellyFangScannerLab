@@ -3,27 +3,30 @@ import java.util.Scanner;
 public class Objective2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Is your number:");
-        System.out.println("type 1: 1-10");
-        System.out.println("type 2: 1-100");
-        System.out.println("type 3: 1-1000");
-        System.out.println("type 4: 1-10000");
+        System.out.println("Hello player! What is your name?");
+        String name = input.nextLine();
+        System.out.println(name+" pick a number from 1 - 20 and I'll guess it.");
 
         int min = 1;
-        int max = 0;
+        int max = 20;
 
-        if (input.nextLine().equals("1")) {
-            max = 10;
+        System.out.println("Is your number 10?");
+
+        if (!input.nextLine().equals("correct"))
+        {
+            {
+                while (!input.nextLine().equals("correct")) {
+                    if (input.nextLine().equals("too high")) {
+                        max = max / 2;
+                    }
+                    else if (input.nextLine().equals("too low")) {
+                        max = max * (3 / 2);
+                    }
+                    System.out.println(name + ", is your number " + max + "?");
+                }
+            }
         }
-        else if (input.nextLine().equals("2")) {
-            max = 100;
-        }
-        else if (input.nextLine().equals("3")) {
-            max = 1000;
-        }
-        else if (input.nextLine().equals("4")) {
-            max = 10000;
-        }
-     System.out.println(max);
+
+        System.out.println(name+" thank you for playing!");
     }
 }
