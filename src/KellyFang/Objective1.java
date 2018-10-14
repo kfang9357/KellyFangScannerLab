@@ -10,13 +10,13 @@ import java.util.Scanner;
         int guess;
         System.out.println("Guess my number");
         guess = input.nextInt();
-        int counter =0;
+        int counter =1;
 
         while (guess!=random)
         {
             System.out.print("Guess again");
-            guess = input.nextInt();
             counter++;
+            guess = input.nextInt();
 
         }
         System.out.println("You got it! The number is "+guess);
